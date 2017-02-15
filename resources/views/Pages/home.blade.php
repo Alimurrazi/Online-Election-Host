@@ -2,10 +2,10 @@
 @section('title','Online Election Host')
 @section('content')
 
-
+ 
 <head>
 <style type="text/css">
-
+ 
 body
  {
    {{-- background-image: url("img/laptop.jpg");  --}}

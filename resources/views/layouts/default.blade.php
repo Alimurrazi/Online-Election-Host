@@ -4,9 +4,9 @@
 <!-- my head section goes here -->
 <!-- my css and js goes here -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="{{ URL::asset('css/style.css')}}">
 
-
-<title>@yield('title')</title>
+<title>Online Election Host</title>
 <style>
  
 
@@ -48,12 +48,18 @@ text-align: center;
 }
 .sidebar{
 float: left;
-max-width: 140px;
+max-width: 170px;
 margin: 0;
 padding: 1em;
 background-color: #292929;
-height: 500px;
+height: 532px;
 }
+
+.sidebar:hover
+{
+   transform: scale(1.01);
+}
+
 .contents{
  
 margin-left: 10px;
@@ -64,7 +70,7 @@ overflow: hidden;
 }
 </style>
 </head>
-
+  
 <body>
 <div class="container">
 <header> @include('layouts.header') </header>
@@ -73,5 +79,5 @@ overflow: hidden;
 <footer> @include('layouts.footer') </footer>
 </div>
 </body>
-
+ 
 </html>

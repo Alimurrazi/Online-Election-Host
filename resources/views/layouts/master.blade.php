@@ -102,7 +102,7 @@ h1 { color: #b48608; font-family: 'Droid serif', serif; font-size: 50px; font-we
 <header>
   <h1> Online Election Host</h1>    
 </header>
-
+ 
 <div class="sidebar">@yield('sidebar')</div>
 <div class="contents">@yield('content') </div>
 
