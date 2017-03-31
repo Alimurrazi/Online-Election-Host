@@ -104,7 +104,9 @@ h1 { color: #b48608; font-family: 'Droid serif', serif; font-size: 50px; font-we
 </header>
  
 <div class="sidebar">@yield('sidebar')</div>
-<div class="contents">@yield('content') </div>
+<div class="contents">
+<input type="hidden" name="_token" id="csrf-token" value="{{ Session::token() }}" />
+@yield('content') </div>
 
 <footer>
 

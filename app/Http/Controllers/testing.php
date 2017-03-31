@@ -54,7 +54,7 @@ class testing extends Controller
 
         $user->title=Input::get('name');
         if (Input::hasFile('image'))
-        {
+        { 
             $file=Input::file('image');
             $file->move(public_path(). '/', $file->getClientOriginalName());
 

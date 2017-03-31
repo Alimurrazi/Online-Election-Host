@@ -59,7 +59,7 @@ h5
   @foreach($electionlist as $v_electionlist)
      <tr>
   <td>
- 
+   
   <h3>
   <a href="{{url('test/'.$v_electionlist->id.'/'.$electionlist_status[$v_electionlist->id])}}">{{$v_electionlist->election_name}}</a>
   </h3>
