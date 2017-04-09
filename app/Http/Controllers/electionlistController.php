@@ -41,7 +41,7 @@ class electionlistController extends Controller
            $electionlist_status[$db_id]=0;
  
            else if($db_date_start>$sample_date)
-           $electionlist_status[$db_id]=2;
+           $electionlist_status[$db_id]=2; 
 
            if($db_date_start<=$sample_date && $db_date_end>=$sample_date)
            $electionlist_status[$db_id]=1;

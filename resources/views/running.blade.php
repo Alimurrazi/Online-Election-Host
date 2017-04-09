@@ -131,7 +131,7 @@ label img {
 <div class="panel">
 
 <ul>
-
+ 
  @foreach($candidate_list[$post_list->id] as $candidate_list[$post_list->id])
   
   <li>

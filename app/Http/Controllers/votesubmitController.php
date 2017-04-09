@@ -11,8 +11,17 @@ class votesubmitController extends Controller
 {
     public function votesubmit()
     {
-      echo "hello world";
       $input = Input::all();
-      return $input;
+     // return $input;
+      $selected = $input['selected'];
+
+      foreach ($selected as $selected)
+      {
+      	 DB::table('candidate')
+      	    ->where('id','=',$selected)
+      	    ->increment('vote_count');
+      }
+
+      	 return View::make('congratulation');
+      }
     }
-}

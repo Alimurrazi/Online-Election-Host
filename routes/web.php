@@ -28,7 +28,11 @@ Route::get('/loginform', function () {
     return view('loginpage test');
 });
 
-Route::post('/votesubmit','votesubmitController@votesubmit'); 
+Route::post('/votesubmit','votesubmitController@votesubmit');
+Route::get('/congratulation',function()
+{
+	return view('congratulation');
+});
 
 Route::get("file",'testing@index');
 Route::post("store",'testing@store');
@@ -36,6 +40,10 @@ Route::get("show",'testing@showall');
 
 Route::get('/imageselection', function () {
     return view('image selection');
+});
+
+Route::get('/bar', function () {
+    return view('bar');
 });
 
 Auth::routes();
