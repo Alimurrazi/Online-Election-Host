@@ -11,10 +11,23 @@ class votesubmitController extends Controller
 {
     public function votesubmit()
     {
+      $voter=DB::table('voter')
+             ->where('id','=',Input::get('voter_id'))
+             ->first();
+
+      if($voter->vote_status==1)
+      return view::make('noentry');
+      else
+      {
+//->update(['postname'=>Input::get('post_name'.$post->id)]);
+       DB::table('voter')
+       ->where('id','=',Input::get('voter_id'))
+       ->update(['vote_status'=>1]);
+
       $input = Input::all();
      // return $input;
       $selected = $input['selected'];
-
+      
       foreach ($selected as $selected)
       {
       	 DB::table('candidate')
@@ -24,4 +37,5 @@ class votesubmitController extends Controller
 
       	 return View::make('congratulation');
       }
+    }
     }

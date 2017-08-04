@@ -1,11 +1,4 @@
 @extends('layouts.master')
- 
-@section('sidebar')
-    <blockquote>
-  	 Why so serious
-  	 <cite>joker</cite>
-  </blockquote>
-@stop
 
 @section('content')
 <head>
@@ -19,7 +12,7 @@ th {
     text-align: center;
     padding: 8px;
 }
-
+ 
 tr:nth-child(even){background-color: #f2f2f2}
 
 th {

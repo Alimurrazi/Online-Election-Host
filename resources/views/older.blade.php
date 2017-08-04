@@ -18,7 +18,6 @@ div.polaroid {
 
 div.container {
   text-align: center;
-  padding: 5px 10px;
 }
 
 </style>
@@ -33,10 +32,8 @@ div.container {
 @for($i=1;$i<=$all_post->total_post;$i++)
 
 <div class="polaroid">
-  <img src="{{URL::asset($winner_list[$all_post->id][$i]->image)}}" style="width:40%">
-  <div class="container">
-    <p>{{$winner_list[$all_post->id][$i]->name}}</p>
-  </div>
+  <img src="{{URL::asset($winner_list[$all_post->id][$i]->image)}}" style="width:50%">
+    <h4>{{$winner_list[$all_post->id][$i]->name}}</h4>
 </div>
 
 @endfor

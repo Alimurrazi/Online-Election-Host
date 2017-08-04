@@ -8,10 +8,40 @@
    <style>
      
 @import url(http://fonts.googleapis.com/css?family=Roboto:400+700);
+
+h1
+{
+  color: red;
+}
+ 
+ul {
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+}
+ 
+li {
+float: left;
+}
+ 
+li a {
+display: block;
+color: white;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+}
+ 
+li a:hover {
+background-color: #111;
+}
+
 body {
   background: #30303A;
-  font-family: Roboto;
+  font-family: Roboto; 
 }
+
 #chart {
   width: 650px;
   height: 300px;
@@ -87,12 +117,15 @@ body {
   left: 0;
   text-align: center;
 }
-	 
+	 h1
+   {
+    style:none;
+   }
    </style>
     
  </head>
  <body>
- 
+   <h1>red</h1>
    <div id="chart">
   <ul id="numbers">
     <li><span>100%</span></li>

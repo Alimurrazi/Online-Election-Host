@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class VoterModel extends Model
 {
-    protected $table='voter';
+    protected $table='voter'; 
 
     public function election()
     {

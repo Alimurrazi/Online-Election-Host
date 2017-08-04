@@ -5,10 +5,24 @@
 <!-- my css and js goes here -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<!--
+<link rel="stylesheet" type="text/css" href="{{URL::asset('bootstrap/css/bootstrap.min.css')}}"/>
+<script type="text/javascript" src="{{URL::asset('bootstrap/js/bootstrap.min.js')}}"></script>
+-->
+
+<link rel="stylesheet" type="text/css" href="{{URL::asset('bootstrap-datetimepicker-master/css/bootstrap-datetimepicker.min.css')}}"/>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script type="text/javascript" src="{{URL::asset('bootstrap-datetimepicker-master/js/bootstrap-datetimepicker.js')}}" charset="UTF-8"></script>
+<script type="text/javascript" src="{{URL::asset('bootstrap-datetimepicker-master/js/locales/bootstrap-datetimepicker.fr.js')}}" charset="UTF-8"></script>
 
 <title>Online Election Host</title>
 <style>
  
+ html{
+  position:relative; 
+  min-height: 100%;
+}
 
 div.container {
 {{-- width: 600px; --}}
@@ -38,7 +52,7 @@ text-decoration: none;
 li a:hover {
 background-color: #111;
 }
-header, footer {
+header{
 padding: 1em;
 color: white;
 background-color: black;
@@ -46,6 +60,17 @@ clear: left;
 text-align: center;
 {{-- width:500px; --}}
 }
+
+footer
+{
+  position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1em;
+    background:#ccc;
+}
+
 .sidebar{
 float: left;
 max-width: 140px;
@@ -103,14 +128,11 @@ h1 { color: #b48608; font-family: 'Droid serif', serif; font-size: 50px; font-we
   <h1> Online Election Host</h1>    
 </header>
  
-<div class="sidebar">@yield('sidebar')</div>
+{{-- <div class="sidebar">@yield('sidebar')</div> --}}
+
 <div class="contents">
 <input type="hidden" name="_token" id="csrf-token" value="{{ Session::token() }}" />
 @yield('content') </div>
-
-<footer>
-
-</footer>
 
 </div>
 </body>

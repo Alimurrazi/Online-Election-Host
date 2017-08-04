@@ -11,12 +11,10 @@
   <div class="wrapper">
 	<div class="container"> 
 		<h2>{{ $present_election }}</h2>
-		 		 
+		  		 
 <form method="post" action="{{ action('VotercheckController@votercheck',$id)}}" class="form" accept-charset="UTF-8"> 
             <input type="hidden"  name="_token" value="{{ csrf_token() }}">
-			<input type="text" name="username" placeholder="Username" required>
-			<input type="text" name="fathername" placeholder="Father's Name" required>
-			<input type="text" name="mothername" placeholder="Mother's Name" required>
+			<input type="text" name="username" placeholder="Username" required> 
             <input type="password" name="idnumber" placeholder="Id number" required>
 			<input type="email" name="email" placeholder="email" required>
 			<input type="password" name="password" placeholder="Password" required>

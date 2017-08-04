@@ -6,11 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class ElectionModel extends Model
 {
-    protected $table ='election';
+    protected $table ='election'; 
 
     public function voter() 
     {
-    	return $this->hasMany('VoterModel','election_id');
+    	return $this->hasMany('VoterModel','election_id'); 
     }
 
     public function post()

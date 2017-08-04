@@ -16,12 +16,11 @@ class CreateVoterTable extends Migration
             Schema::create('voter', function (Blueprint $table) {
             $table->increments('id');
             $table->string('username');
-            $table->string('father_name');
-            $table->string('mother_name');
             $table->integer('id_number');
             $table->string('email');
-            $table->string('password');
+            $table->string('password')->default(0167);
             $table->integer('election_id')->unsigned();
+            $table->integer('vote_status')->default(0);
             $table->foreign('election_id')->references('id')->on('election')->onDelete('cascade');
             $table->timestamps();
         });

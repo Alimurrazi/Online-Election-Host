@@ -6,14 +6,13 @@
 <html>
 <head>
 
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script> 
 $(document).ready(function(){
     $(".flip").click(function(){
         $(this).next(".panel").slideToggle("slow");
     });
-});
+}); 
 </script>
 
 <script>
@@ -116,7 +115,7 @@ label img {
   z-index: -1;
 }
 </style>
-
+ 
 
 </head>
 <body>
@@ -124,7 +123,8 @@ label img {
 <form method="post" action="{{action('votesubmitController@votesubmit')}}" class="form"> 
  
  <input type="hidden"  name="_token" value="{{ csrf_token() }}">
-
+   <input type="hidden"  name="voter_id" value="{{ $voter_data->id }}">
+   
 @foreach($post_list as $post_list)
   <h1>{{$post_list->postname}}</h1>
   <div class="flip">Click to slide the panel down or up</div>
@@ -145,12 +145,12 @@ label img {
   Your browser does not support the video tag.
 </video>
   <h4>campaign</h4>
-    </label>
+    </label> 
   </li>
 
-@endforeach
+@endforeach 
 
-
+ 
 </ul>
 </div>
 

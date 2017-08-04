@@ -8,6 +8,6 @@ class CandidateModel extends Model
 {
      public function post()
     {
-    	return $this->belongsTo('PostModel');
+    	return $this->belongsTo('PostModel'); 
     }
 }
