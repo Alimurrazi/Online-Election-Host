@@ -17,7 +17,7 @@ class CreateCandidateTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('team');
-            $table->string('image');
+            $table->string('image'); 
             $table->string('video');
             $table->integer('vote_count')->default(0);
             $table->integer('post_id')->unsigned();

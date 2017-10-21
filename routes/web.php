@@ -63,7 +63,7 @@ Route::get('my/Voter/Delete/{id}','VoterUpdateController@delete');
 
 Route::get('/update',function()
 {
-	return view('update');
+	return view('update'); 
 });
 
 Route::get('/imageselection', function () { 
@@ -79,4 +79,4 @@ Route::get('/send', 'EmailController@send');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
- 
+  

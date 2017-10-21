@@ -6,8 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class CandidateModel extends Model
 {
-     public function post()
+     public function post() 
     {
-    	return $this->belongsTo('PostModel'); 
+    	return $this->belongsTo('PostModel');   
     }
 }

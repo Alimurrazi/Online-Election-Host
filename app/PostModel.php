@@ -10,11 +10,11 @@ class PostModel extends Model
 
     public function election()
     {
-    	return $this->belongsTo('ElectionModel');
+    	return $this->belongsTo('ElectionModel'); 
     }
 
     public function candidate()
     {
     	return $this->hasMany('CandidateModel','post_id');
     }
-}
+} 

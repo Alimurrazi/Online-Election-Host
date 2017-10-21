@@ -14,7 +14,7 @@ class EditElectionTable extends Migration
     public function up()
     {
             Schema::table('election', function (Blueprint $table) {
-            $table->integer('email_send')->default(0);
+            $table->integer('email_send')->default(0); 
         });
     }
 

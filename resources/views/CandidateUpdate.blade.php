@@ -11,7 +11,7 @@
 <form method="post" action="{{ action('CandidateUpdateController@update') }}" class="form" accept-charset="UTF-8">
   <input type="hidden"  name="_token" value="{{ csrf_token() }}">
   <input type="hidden" name="election_id" value={{$id}}>
-
+ 
   
   @foreach($candidate as $candidate)
   <br>
